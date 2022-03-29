@@ -1,0 +1,87 @@
+<script>
+    'use strict'
+    class Account {
+        static accid() {
+            Account.dd = ++Account.dd || 1;
+            return Account.dd;
+        }
+        constructor(name, amt) {
+            alert(new.target)
+            if (new.target === Account) {
+                throw new TypeError("Cannot construct Abstract instances directly");
+            }
+
+            this.Aname = name;
+            this.Abalance = amt;
+            this._id = Account.accid();
+        }
+        get Aname() {
+            return this._name;
+        }
+        set Aname(value) {
+            this._name = value;
+        }
+
+        get Abalance() {
+            return this._balance;
+        }
+        set Abalance(value) {
+            this._balance = value;
+        }
+        deposit(amt) {
+            this.Abalance += amt;
+        }
+        get Aid() {
+            return this._id;
+        }
+        toString() {
+            return this.Aname + "  " + this.Abalance + "id=" + this.Aid
+        }
+
+    }
+    class SavingAccount extends Account {
+        constructor(name, amount) {
+            super(name, amount);
+        }
+
+        withdrow(amt) {
+            const minbal = 10000;
+
+            var b = this.Abalance - amt
+            if (b < minbal) {
+                throw new Error("insufficiant balance");
+            }
+            this.Abalance -= amt;
+        }
+
+    }
+    var sa1 = new SavingAccount("Raj", 50000);
+    console.log(sa1);
+    document.write(sa1);
+    var sa2 = new SavingAccount("manali", 90000);
+    console.log(sa2);
+    document.write(sa2);
+    sa2.Aname = "vita";
+    console.log(sa2.hasOwnProperty("Aname"));
+    console.log(sa2.hasOwnProperty("_name"));
+    var oba = new Account("Geeta", 5000);
+
+    class currentAccount extends Account {
+        constructor(name, amount) {
+            super(name, amount);
+        }
+        withdrow(amt) {
+            this.Abalance -= amt;
+        }
+
+    }
+    var ca1 = new SavingAccount("Vidya", 90000);
+    console.log(ca1);
+    ca1.deposit(8000);
+    document.write(ca1);
+    ca1.withdrow(70000);
+    document.write(ca1);
+    document.write("<hr/>");
+    for (var x in ca1)
+        document.write(ca1[x]);
+</script>

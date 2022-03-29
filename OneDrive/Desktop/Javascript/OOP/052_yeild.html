@@ -1,0 +1,32 @@
+<script>
+    //------------------
+    class Company {
+        constructor() {
+                this.x = new Array()
+                this.x[0] = new Employee("Raj", 1);
+                this.x[1] = new Employee("Mona", 2);
+                this.x[2] = new Employee("Geeta", 3);
+            } *
+            crIterator() {
+                yield* this.x;
+            }
+    }
+
+
+
+    class Employee {
+        constructor(nm, id) {
+            this.name = nm;
+            this.id = id;
+        }
+        toString() {
+            return this.name + " " + this.id;
+        }
+    }
+    var cc = new Company();
+
+    var i = cc.crIterator();
+    console.log(i)
+    for (let x of i)
+        document.write(x);
+</script>

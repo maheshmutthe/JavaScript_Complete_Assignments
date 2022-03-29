@@ -1,0 +1,16 @@
+<script>
+    "use strict";
+
+    function multiply(...myarg) {
+        console.log(myarg) //
+        console.log(typeof myarg) // object
+        console.log(myarg.constructor) // object
+        let sum = 0;
+        for (let i = 0; i < myarg.length; i++)
+            sum = sum + myarg[i];
+        return sum;
+    }
+    var arr = multiply(2, 3);
+    document.write(arr);
+    arr = multiply(2, 3, 5, 6, 7);
+</script>

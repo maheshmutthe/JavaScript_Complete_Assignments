@@ -1,0 +1,42 @@
+<script>
+    'use strict'
+    class Account {
+        constructor(name, amt) //(1)
+            {
+                this.Aname = name;
+                //(2)
+                this.Abalance = amt;
+                //(4)
+            }
+        get Aname() {
+            return this._name;
+        }
+        set Aname(value) {
+                this._name = value;
+            } //(3)
+
+        get Abalance() {
+            return this._balance;
+        }
+        set Abalance(value) {
+                this._balance = value;
+            } //(5)
+
+        deposit(amt) {
+            this.Abalance = this.Abalance + amt;
+        }
+
+        toString() { //calling get
+            return this.Aname + "  " + this.Abalance
+        }
+    }
+    var obj1 = new Account("raj", 20000);
+    console.log(obj1);
+    document.write(obj1);
+    obj1.Aname = "geeta"; //calling set
+    console.log(obj1);
+    document.write(obj1);
+    document.write(obj1.Aname);
+    obj1.deposit(200);
+    document.write(obj1);
+</script>

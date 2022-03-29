@@ -1,0 +1,37 @@
+<script language="JavaScript">
+    // ask for user input
+
+    code = prompt("Enter some JavaScript code");
+    // run the code and catch errors if any generated
+    var x;
+    try { 
+        /*
+          alert(someArr[18])
+          null.f()
+          var someArr = new 
+          vara count = 99
+          Hello', 'someFile.js', 10
+
+          */
+
+        var someArr = new Array(89723742304323248456)
+        alert(someArr);
+        alert("This statememt may not get executed");
+    } catch (e) {
+
+        if (e instanceof TypeError) {
+            alert(e.message + "Variable type problem, check your variable definitions!" + e.name)
+        } else if (e instanceof RangeError) {
+            alert(e.message + "Number out of range!" + e.name)
+        } else if (e instanceof SyntaxError) {
+            alert(e.message + "Syntax error in code!" + e.name);
+        } else if (e instanceof ReferenceError) {
+            alert(e.message + "Reference err-----!" + e.name);
+        } else {
+            alert(e.message + "An unspecified error occurred!" + e.name);
+        }
+    } finally {
+        alert("Thank you for playing. Come back soon!");
+    }
+    document.write("after catche and finally block")
+</script>

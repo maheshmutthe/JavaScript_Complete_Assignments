@@ -1,0 +1,21 @@
+<script>
+    obj = {
+        fname: "Raj",
+        lname: "Mathur",
+        age: 25,
+        add: {
+            d: "juhu"
+        },
+        fullname: function() {
+            return this.fname + " " + this.lname;
+        },
+        toString: function() {
+            return this.fullname() + "  " + this.age + " " + this.add.d;
+        }
+
+    }
+    var f = obj.fullname();
+    document.write(f);
+    document.write(obj);
+    document.write(obj.toString());
+</script>

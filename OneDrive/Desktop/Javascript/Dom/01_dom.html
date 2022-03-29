@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function callme() {
+            var s = document.getElementById("pr")
+                //alert(s);
+                //alert(s.nodeName) //name of node here is p tag
+            alert(s.childNodes[1].childNodes[0].nodeValue) //1st childe ka data
+
+            alert(s.childNodes[0].nodeName) //#text
+            alert(s.childNodes[0].nodeType) //3
+            alert(s.innerHTML); //entire data between tag
+            console.log(window);
+        }
+    </script>
+</head>
+
+<body>
+    <p onmouseOver="callme()" id="pr">Welcome<b> to world of</b> Dom</p>
+</body>
+
+</html>

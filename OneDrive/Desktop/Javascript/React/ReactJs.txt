@@ -1,0 +1,198 @@
+View Only -->
+One-way Data Binding: ReactJS follows unidirectional data flow or 
+one-way data binding. The one-way data binding gives you better control
+ throughout the application. If the data flow is in another direction, 
+then it requires additional features. It is because components are supposed
+ to be immutable, and the data within them cannot be changed.
+
+What if user turned off script ??
+-->  if user turn off script give message using noscript to the user (Like for better experienced please turn on script).
+
+
+what is jsx ??
+--> javascript syntax extenstion (Dynamic creation of form, radio button) --> converts jsx to javascript internally
+
+
+What is the virtual DOM?
+--> virtual DOM is a concept where a virtual representation of the real DOM is kept inside the memory and is
+	synced with the real DOM by a library such as ReactDOM.
+	Render in react only update the Dome it will not recreate 
+	Uses Virtual Dome
+	creating react element compare to dome element is lightweight in react because it uses 
+	virtual dome
+
+
+What is react ??
+--> react is namespace(Logically grouping of data)
+		(React is a free and open-source front-end JavaScript library for building user interfaces based on UI
+		 components. It is maintained by Meta and a community of individual developers and companies.)
+
+
+what is createelement ??
+--> createelement is internally reactelement 
+	(createelement tags create at runtime)
+	createElement() method creates the HTML element specified by tagName, or an HTMLUnknownElement if tagName isn't recognized
+
+Ways to create element
+element creation 
+1st way --> JSX (can be nested root -> child, child)
+2nd --> 	react.createElement(tag, css, data)	(Use ReactDOM.render() to render an element to a page)
+3rd way-->  
+
+How to create react app ??
+--> npx create-react-app projectname	(Internet needs to create app folder & npm also gives dependency and project details in json)
+npx --> npm package runner
+
+Entry point in project folder ??
+--> index.js src (entry point eventhough index.html will be called first)
+flow --> start --> webpack --> index.js(Entry Files) --> app.js(componant)
+but in browser index.html will be loaded first
+then to entry point(index.js)
+
+
+What is babel & webpack
+babel 7 (JSX to javascript), 
+webpack 4 (Minification/Bundling)
+
+Can we use conditional statements in tag ??
+in tags conditional statement not allowd but ternary can be used.
+
+how to write css in react
+--> myStyle(camel case)	(in js it is recommonded to use css in js file itself)
+
+What is element ??
+element is smallest building block of react app and element spacify what should be their in our UI.
+
+what is tag in js ??
+tag internally is react.createElement(tag, css, data(can be tag also))
+
+how many ways we can create componant(or use) ??
+--> Function as componant, Class as a Componant
+Componant is reusable
+
+how to Stringify -> 
+Convert a JavaScript object into a string with JSON.stringify().
+
+Componant life cycle --> Class components can define functions that will execute during the component's lifecycle.
+ There are a total of seven lifecycle methods: componentWillMount , componentDidMount , componentWillReceiveProps ,
+ shouldComponentUpdate , componentWillUpdate , componentDidUpdate , and componentWillUnmount
+
+"Lifecycle Methods"
+--> componantDidMount -> after componant mounting we fetch the method
+	which request to the network through web api then after
+	fetching we get response as a json and in result we get final data
+	and setState will become full.
+
+
+First preferance will be dom then componant
+
+isLogIn -> Toggle between (if & else login and logout on true or false) or
+ dynamically
+
+conditional rendering -> on condition it allows us to show element or Componants
+
+onchange event ??
+--> The onchange event occurs when the value of an element has been changed.
+For radiobuttons and checkboxes, the onchange event occurs when the checked state has been changed.
+
+onsubmit ??
+-->React invokes onSubmit() handler when the form is submitted, i.e. the user clicks Submit button.
+If the form validation fails, then onSubmit() event handler is not invoked.
+
+
+?. 
+optional chaining
+--> The optional chaining operator (?.) enables you to read the value of a property located deep within a 
+chain of connected objects without having to check that each reference in the chain is valid.
+
+The ?. operator is like the . chaining operator, except that instead of causing an error if a reference
+ is nullish (null or undefined), the expression short-circuits with a return value of undefined. When 
+used with function calls, it returns undefined if the given function does not exist.
+multiple optional chaining
+
+?? nulish
+--> if all before not present gives default -> ?? "";
+
+array & object destructuring
+
+estructuring is a JavaScript expression that makes it possible to unpack values
+ from arrays, or properties from objects, into distinct variables. That is, we
+ can extract data from arrays and objects and assign them to variables.
+can be done using rest
+in object if value isnt assigned we can give default too
+
+
+
+
+
+rerender -->	
+React components automatically re-render whenever there is a change in
+ their state or props. A simple update of the state, from anywhere in 
+the code, causes all the User Interface (UI) elements to be re-rendered 
+automatically.
+
+avoid rerendering -->  To avoid re-rendering per component with the you
+ will use the shouldComponentUpdate() lifecycle.
+	stop re-rendering use memoisation - export memo(Todos)
+	
+useRef instead useState
+useRef does not reRender while updating 
+useRef uses to setCursur & keep track of previous and new value
+useRef > mutable current object, it holds the value
+
+
+
+Explain React Hooks.
+
+Hooks are functions that let us “hook into” React state and lifecycle features from a functional component.
+React Hooks cannot be used in class components. They let us write components without class.
+	(features of vlass based components in function based components
+	it allows you to use state and other react features without writing class
+	Hooks are the function which "hook into" React state and lifecycle features
+	from function componants)
+
+useState > text, syntaxt
+useEffect > work on sideffect the work which use to work on
+		componantdidmount use to do
+
+useContext > tree prop > globaly avails the root prop
+
+
+...value (spread)
+--> shalow copy
+
+...user (spread)
+--> update properties
+
+memoization ?? (similler to caching)
+--> using memo will cause React to skip rendering a componant if its
+props have not changed.
+This can improvement
+
+if we do not want any tag ??
+--> <> </>
+
+React Context is way to manage State Globally (React is tree strucure)
+It can be used together with the useState Hook to share state between deeply
+nested easily then with useState alone.
+
+parent to child --> drilling -- (top level to low level)
+
+create context and initialize, usercontext.provider()
+in 5th compo use userContext
+data will be store as globally
+
+createContext --> (can we maintain userid throughout the application using useContext)
+
+both are predefined hooks
+
+
+useCallback
+return memoised function 	(memoisation -> caching)
+
+useMemo returns Memoised Value
+
+react.lazy loading
+authentication 
+
+

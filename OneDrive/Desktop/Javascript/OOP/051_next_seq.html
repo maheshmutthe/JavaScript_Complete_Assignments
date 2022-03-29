@@ -1,0 +1,20 @@
+<script>
+    class MyClass { *
+        createIterator() {
+            yield 1;
+            yield 2;
+            yield 3;
+        }
+    }
+    let instance = new MyClass();
+    let iterator = instance.createIterator();
+    console.log(iterator);
+    let one = iterator.next();
+    alert(JSON.stringify(one));
+    let two = iterator.next();
+    alert(JSON.stringify(two));
+    let three = iterator.next();
+    alert(JSON.stringify(three));
+    let four = iterator.next();
+    alert(JSON.stringify(four));
+</script>

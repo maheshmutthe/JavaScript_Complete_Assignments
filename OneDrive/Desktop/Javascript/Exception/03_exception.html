@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <script language="JavaScript">
+        Idiot = new Error("Idiot user detected, terminating... ")
+
+        function checkAge() {
+            try { // if incorrect value in form
+                // generate an error
+                if (document.forms[0].age.value > 99) {
+                    throw Idiot;
+                    //thow RangeError
+                }
+            } catch (e) {
+                console.log(e)
+                alert(e);
+                console.log(e.__proto__)
+                console.dir(e)
+                    // catch all thrown errors and print error type
+                alert(e.name + "  " + e.message);
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <form>
+        <input type="text" name="age" onBlur="checkAge()">
+    </form> </body>
+
+</html>

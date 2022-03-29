@@ -1,0 +1,249 @@
+JQuery (uses seezle engine faster than browser)
+
+1) Dynamic create tag (see at run time)
+
+ <!DOCTYPE html>
+<html>
+<head>
+<script src="jquery-1.9.1.js"></script>
+
+<script>
+$(document).ready(function() {
+$('#btn').click(function(){
+  $('<p id="test">My <em>new</em> text</p>').appendTo('p');
+  });
+});
+</script>
+</head><body>
+<p>para 1</p>
+<B>para 2</B>
+<input type="button" id="btn"/>
+</body>
+</html>
+
+
+2)
+<!DOCTYPE html>
+<html><head>
+<script src="jquery-1.9.1.js"></script>
+<script>
+$(document).ready(function() {
+
+$("#pp").mouseover(function(){
+var str='hello<p id="test">My <em>new</em> text</p>data';
+  $($.parseHTML(str)).appendTo('body');
+  })
+});
+</script>
+</head><body>
+<p id="pp">para 1</p>
+<p>para 2</p>
+</body>
+</html>
+
+
+3) Filter
+
+<html>
+<script src="../jquery-1.9.1.js"></script>
+<script>
+$(document).ready(function() {
+$("li").filter(function( index ) {
+ 
+   alert(this.nodeName)
+     return $("strong",this).length === 1;
+  }).css( "background-color", "red" );
+});
+</script>
+<body>
+<ul>
+  <li><strong>list</strong> item 1 - one strong tag</li>
+  <li><strong>list</strong> item 1 <strong>2 strong tag</strong> -
+    two <span>strong tags</span></li>
+  <li>list item 3</li>
+  <li>list item 4</li>
+  <li>list item 5</li>
+  <li>list item 6</li>
+</ul>
+
+</body>
+</html>
+
+4) find and filter
+<html>
+<style>    
+.dd{ 
+        display:block;
+        border:2 solid lightgrey;
+        color:lightgrey;
+        padding:5px;
+        margin:15px;
+      }
+</style>
+<script src="../jquery-1.9.1.js"></script>
+<script>
+$(document).ready(function() {
+   $('div').find('span').css('color',"red");
+
+});
+</script>
+<body>
+<div  class="dd" style="width:500px">
+ div (current element) 
+  <p>p (child)
+    <span>span (grandchild)</span>   
+  </p>
+  <p>p (child)
+    <span>span (grandchild)</span>
+  </p> 
+</div>
+
+
+</body>
+</html>
+
+
+5) End
+<html>
+<script src="../jquery-1.9.1.js"></script>
+<script>
+$(document).ready(function() {
+    $('ul.first').find('.foo').css('background-color', 'red')
+      .end().find('.bar').css('background-color', 'green');
+    
+    });
+
+</script>
+<body>
+<ul class="first">
+   <li class="foo">list item 1</li>
+   <li>list item 2</li>
+   <li class="bar">list item 3</li>
+</ul>
+<ul class="second">
+   <li class="foo">list item 1</li>
+   <li>list item 2</li>
+   <li class="bar">list item 3</li>
+</ul>
+
+
+</body>
+</html>
+
+6) andself
+<html>
+<script src="../jquery-1.9.1.js"></script>
+<style>
+.background{background:yellow; }
+</style>
+<script>
+$(document).ready(function() {
+$("div").find("p").andSelf().addClass("background ");
+
+});
+
+</script>
+<body>
+<div>data
+<p>First Paragraph</p>
+<p>Second Paragraph</p>
+</div>
+</body>
+</html>
+
+
+7) .Contents (innerHtml)
+<html>
+<script src="../jquery-1.9.1.js"></script>
+<script>
+$(document).ready(function() {
+
+alert($('.container').contents().text());
+
+$('.container').contents().filter(function() {
+
+alert(this.nodeValue);  //this refer to current object
+  return this.nodeType == 3;
+}).wrap("<b></b>");
+});
+</script>
+<body>
+<div class="container">data<p>this is </p>divdata</div>
+</body>
+</html>
+
+
+8) Loop
+
+<html>
+<script src="../jquery-1.9.1.js"></script>
+<script>
+$(document).ready(function() {
+var sum = 0;
+ var arr = [ 2, 4, 3, 1, 5 ];
+$.each( arr, function(index, value){
+      alert(index +":"+value)
+       sum += value;
+});
+alert("sum="+sum);
+});
+</script>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+9) Loop over object
+
+<html>
+<script src="../jquery-1.9.1.js"></script>
+<script>
+$(document).ready(function() {
+var sum = 0;
+ var arr = [ 2, 4, 3, 1, 5 ];
+$.each( arr, function(index, value){
+      alert(index +":"+value)
+       sum += value;
+});
+alert("sum="+sum);
+});
+</script>
+</head>
+<body>
+    
+</body>
+</html>
+</html>
+
+
+10) iterate over collection
+
+<html>
+<script src="../jquery-1.9.1.js"></script>
+<script>
+$(document).ready(function() {
+var dp="";
+$('#btn').click(function(){
+$('li').each(function(index) {
+   // alert(index + ': ' + $(this).text());
+		dp+=index + ': ' + $(this).text()+"<br/>";
+ });
+    $('#dd').html(dp);
+   })
+});
+</script></head>
+<body>
+    <ul>
+    <li>foo</li>
+    <li>bar</li>
+  </ul>
+<div id="dd">
+check
+</div>
+<button  type="button" id="btn">click</button>
+</body>
+</html>
+
+

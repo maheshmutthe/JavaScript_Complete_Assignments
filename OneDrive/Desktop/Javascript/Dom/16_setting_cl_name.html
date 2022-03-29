@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <style>
+        .cl {
+            background-color: yellow;
+            font-size: 150;
+            color: red;
+        }
+        
+        .cc {
+            color: blue;
+        }
+    </style>
+    <script>
+        function callme() {
+            ob = document.getElementById("pr")
+            ob.className = "cl";
+        }
+    </script>
+</head>
+
+<body>
+    <p onmouseOver="callme()" id="pr" class="cc"> welcome to world of style and dom</p>
+</body>
+
+</html>

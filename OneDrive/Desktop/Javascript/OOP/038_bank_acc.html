@@ -1,0 +1,31 @@
+<script>
+    'use strict'
+    class Account {
+        constructor(name, amt) {
+            this.name = name;
+            this.balance = amt;
+            alert(typeof this.constructor)
+        }
+        deposit(amt) {
+            this.balance += amt;
+        }
+        display() {
+            return this.name + "  " + this.balance
+        }
+    }
+    var obj1 = new Account("raj", 20000);
+    console.log(obj1.display());
+    document.write(obj1.display());
+    document.write(obj1)
+
+    obj1.name = "geeta";
+    console.log(obj1.display());
+    document.write(obj1.display());
+    document.write(obj1)
+
+    var obj2 = new Account("Mona", 50000);
+    console.log(obj2);
+
+    console.log(new Object());
+    document.write(new Object());
+</script>

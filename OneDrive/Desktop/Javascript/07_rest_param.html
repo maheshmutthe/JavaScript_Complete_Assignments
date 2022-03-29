@@ -1,0 +1,17 @@
+<script>
+    function multiply(...myarg) //1 [] 2,3
+    {
+        console.log(myarg)
+
+        console.log(myarg.constructor.name)
+
+        sum = 0;
+        for (let i = 0; i < myarg.length; i++)
+            sum = sum + myarg[i];
+        return sum;
+    }
+
+    var arr = multiply(2, 3);
+    document.write(arr);
+</script>
+If the last named argument of a function is prefixed with ..., it becomes an array whose elements from 0 to theArgs.length are supplied by the actual arguments passed to the function. rest parametr has to be last only

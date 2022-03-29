@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .mystyle {
+            width: 500px;
+            height: 50px;
+        }
+        
+        .anotherClass {
+            background-color: bisque;
+        }
+        
+        .myClass {
+            text-align: center;
+            font-size: 25px;
+            color: black;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>Click the button to display the class names of the div element.</p>
+
+    <div id="myDIV" class="mystyle myClass">
+        I am a DIV element with multiple classes
+    </div>
+
+    <button onclick="myFunction()">Try it</button>
+
+
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            let divobj = document.getElementById("myDIV");
+            y = divobj.classList;
+            alert(y.length);
+            alert(y[0]);
+            divobj.classList.add("anotherClass");
+
+            document.getElementById("demo").innerHTML = y[2];
+        }
+    </script>
+
+</body>
+
+</html>

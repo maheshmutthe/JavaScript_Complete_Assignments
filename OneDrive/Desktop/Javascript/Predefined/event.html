@@ -1,0 +1,24 @@
+<html>
+</head>
+<script>
+    function callme() {
+        window.open('p.html')
+
+    }
+
+    function tool() {
+        window.open('p.html', '_blank', 'height=200,width=200,left=250,top=250')
+    }
+</script>
+</head>
+
+<body>
+    <input type="button" value="open" onclick="callme()" id="btn1" />
+    <input type="button" value="without toolbar" onclick="tool()" id="btn2" />
+</body>
+<script>
+    // document.getElementById('btn1').addEventListener('click', callme, false);
+    //document.getElementById('btn2').addEventListener('click', tool, false);
+</script>
+
+</html>

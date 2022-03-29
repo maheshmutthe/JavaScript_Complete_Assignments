@@ -1,0 +1,500 @@
+Day1
+
+ 1)Difference Between Let, and Var
+
+-> Scope of let is BLock level and Var cha Functional Scope
+    var can be rdeclare  and let cannot be redeclare(if we use same variable in var it 
+	creates object of respective type of data but it is not the dame case with let)
+   
+
+2)Difference and similarities Between Let, and  Const
+
+-> Const has compulsion to define and initilize in same line
+   whereas let can be initilize and declare in different line
+
+   both have block level scope(similaraties)
+
+
+3)why to use 'use strict'
+
+-> to do Programming safely
+
+
+
+4)what is the use of Typeof
+
+-> it gives the datatype of class
+
+
+5)Which operator is overloaded
+
+-> + operator is overloaded.
+
+6)What is the default value if variable is not assign any value.
+
+->undefined.
+
+7)Calculation between number and Undefined results into
+
+->NaN(Not a number)
+
+8)What is the default value returned by function.
+
+->undefined
+
+9)Explain following line  window.document.write()
+
+-> window is ref of Window class and document is reference of Document class which is child 
+	of Windoew class and write is method Document class.
+
+
+10)Is java script object oriented?
+
+-> yes it is object oriented.
+
+11)List down predefined references [Object] in JS
+
+-> document,window.
+
+12)Which version you have learned?
+
+->js6.
+
+13)Why Js is called client side?
+
+->Source code is process by client side. 
+
+14)is java script Dynamic? explain with examples.
+->yes.  
+    ex-  a=5 ;
+    document.write(a); //it will print 5  how? it will resolves at runtime that datatupe of a is number
+          
+
+15)In java script parameter in function call and parameter in defination need to be same?
+
+->no
+
+
+16)do we need to terminate statement using semicolon ; in JS
+-> not compulsory.
+
+17)use of javascript?
+
+->its main purpose is client side validation.
+
+18)Tell me the frame works or libraries  build using JS
+
+->Node.Js,Vue.js,React are framework
+  Jquery And react library
+
+19)How to get count of the given string.
+
+->match function.
+
+
+20)what is valueOf() in which class it is defined.
+
+-> javaScript calls the valueOf method to convert an object to a primitive value.
+valueOf() will give you value within data.
+    It resides in Object class
+
+
+Day 2
+
+ 1)what is difference between call and apply?
+
+->The call() method takes arguments separately.
+
+ The apply() method takes arguments as an array.
+
+
+2)how to declare instance method in class?
+
+-> An instance method is a function which is part of a class, and acts on an instance of that class.
+    
+
+
+3)When you print object inernaly it will call which method
+
+->tostring()
+
+4)what is difference between of and in key word
+
+-> in: this keyword print key-value pair present in array 
+   of: this keyword print undefined in place where element not present in array
+
+5)what is difference between push unshift
+
+->push:  add element at end of array
+  unshift: add the element at beginnning of array
+
+
+6)what is difference betwee pop shift
+
+-> pop: remove element at the end of array
+   shift: remove element from beginning in array
+
+
+7)what is difference between find and filter
+
+-> find: it returns the value of first element in provided  array that satisfies the provided testing function. 
+         if no value satisfy the provided testing function it return undefined 
+
+   filter(): it creates the new array with all element that passes the test implemented by provided function
+
+ 8)what is splice and slice
+
+-> slice: it cuts the array from given index and does not modify original array .we can also specify start
+	 index and end index then from start index to excluding last index it cuts array
+
+	part of the array copy from one to another array (here size is index)
+
+   splice:it is use to add element from specified index and given element in syntax  and remove element from specified index 
+		(Modifies original array)
+		add and remove 
+		fruits.splice(1,3) removes from 1 to 3
+		fruits.splice(2,0,"lemon","banana") add from 2
+		(start, remove) 
+
+
+9)How to convert array to string?
+
+->join("_") is used to convert array to string (if no parameter pass then element are seperated by , it bcome string)
+
+
+
+10)explain three different ways to create object in JS
+
+->There are four ways to create an object in JavaScript - 
+  using object literals, 
+  using the function constructor, 
+  using the Object.create() method,
+  and using the class keyword (which is almost the same as using a function constructor)
+
+
+
+11)Why Js is called Client side
+
+->   Client-side means that the action takes place on the user's (the client's) computer. 
+      Server-side means that the action takes place on a web server.
+
+     JavaScript is a client-side language, which means it gets executed at the client side (i.e, user side). 
+     Whenever you browse the web, all the HTML,CSS & JS files are fetched from the server & then
+	 executed/interpreted at your side by your browser.
+
+
+
+
+12)explain call back  and self invoking function
+
+->self invoking function is used when we have a scenario that something get printed or initialized  
+	as soon as the page gets laoded.
+   
+  call back function is when we pass parameter in function call as function defination 
+   
+<script>
+
+      var go=function(w)
+	{
+             alert(w(5));    //w is pointing to anonymous funxction and this concept is called as callback
+           }
+
+     go(function(a) {
+         return a*a*a
+           }
+          )
+</script>
+
+
+13)
+sort --> sortd the data
+v8 chrome machine browser --> quick or insertion sort (for small array)
+firefox : merge sort
+safari: quick merge or insertion (depends on condition)
+
+find --> return the 1st which satisfies the condition
+
+filter --> return all which satisfies the condition
+
+at --> return the value at index (- or + position)
+
+fill --> The fill() method fills specified elements in an array with a value.
+	The fill() method overwrites the original array.
+	Start and end position can be specified. If not, all elements will be filled.
+	array.fill(value, start, end)	
+
+14)
+include --> The includes() method returns true if a string contains a specified string.
+Otherwise it returns false.
+The includes() method is case sensitive.
+
+
+pop --> removes from top
+shift --> removes from bottom
+unshift --> adding data at bottom
+push --> add the top
+reverse --> modify original data to change data in reverse
+
+
+
+literal vs constuctor object
+-->
+The constructor object has its properties and methods defined with the keyword 'this' in front of it, whereas the literal version does not.
+In the constructor object the properties/methods have their 'values' defined after an equal sign '=' whereas in the literal version, 
+they are defined after a colon ':'.
+The constructor function can have (optional) semi-colons ';' at the end of each property/method declaration whereas in the literal
+ version if you have more than one property or method, they MUST be separated with
+a comma ',', and they CANNOT have semi-colons after them, 
+otherwise JavaScript will return an error.
+
+You can create multiple object for constructor object
+You create only one object in literal object. Just for display and temporary use.
+single object in literal and multiple in constuctor
+
+
+
+Day4
+
+whats is difference between function as class and class key word
+--> 'use strict' to use functionas as a class while in case of class keyword doesnt need use 'use strict' keyword'
+	inhertitance in function as a class is old style of prototype has to use and in only class we use through 
+		extends with less and easy syntax
+	function as a class is enumrable where class isn't.
+	when we use function as a class for inherited property we have type prototype keyword when we use class 
+		keyword we dont have to write
+ 
+Prototype-based programming 
+--> Prototype-based programming is a style of object-oriented programming in which classes are not explicitly 
+defined, but rather derived by adding properties and methods to an instance of another class or, 
+less frequently, adding them to an empty object.
+In simple words: this type of style allows the creation of an object without first defining its class.
+
+
+How to implement inheritance  in Es5
+--> child.prototype=Object.create(person.prototype);
+
+How to implement inheritance  in Es6
+--> extends keyword
+
+How to call parent class constructor in ES5 and ES6
+ES - 5 --> Call & Apply
+ES - 6 --> Super
+
+Does JS support method overloading?
+--> No
+
+How to imlement Method overriding in JS
+--> by only redeclearing no special keyword need to use.
+
+Do we have constructor over loading in JS
+--> No.
+
+What is top level class ??
+--> Javascript has a top-level object, that maintains the global variables. (ex Window, Document)
+
+what is clousre
+--> Closure persist variable and make them to use as private
+	(Static and private)
+
+what is big fat arrow  in JS, Where have you used it
+-->  It allows you to create functions in a cleaner way compared to regular functions
+	Lambda in java or Csharp 
+	ex:-> Before: hello = function() { return "Hello World!"; ...
+		With Arrow Function: hello = () => { ...
+
+difference between rest and spread
+--> REST parameter: use to merge a list of function arguments into an array &
+   SPREAD paramter: used to split up array elements
+
+what is arguments key word
+--> it is used  for variable length of argument in ES5.
+
+how to make object immutable
+--> Freeze() 
+
+state static method in Object class
+--> Reuse the method 
+
+
+How to make class abstract
+-->  Using new.target we can make class abstract
+	ex->
+	if (new.target === Account) 
+	     {
+      throw new TypeError("Cannot construct Abstract instances directly");
+
+
+what is instanceof does
+--> checks the object type returns boolean value.
+
+why we need getter setter in JS , list down predefine getter setter
+--> Getter for Dispaying or by progammer side adding the value and Setter for accepting value or confirmation 
+	For modifying object as per need
+	setter -- Current(accepts the element at current position), prop(to bind the given function ())
+			innerHTML ->  The JavaScript innerHTML property sets the HTML contents of an element on a web page.
+
+	getter -- Latest(Displays add latest element)
+	
+
+All exception are derived from which class
+--> Error
+
+what is difference between console.log , document.write‌,innerHTML
+--> Console.log prints on Console
+	documents.write print on browser screen
+	innerHTML ->  The JavaScript innerHTML property sets the HTML contents of an element on a web page.
+
+what is bind method?
+--> In JavaScript function binding happens using Bind() method. With this method, we can bind an object 
+to a common function, so that the function gives different result when needed. otherwise it gives the same
+ result or gives an error while the code is executing.
+We use the Bind() method to call a function with the this value, this keyword refers to the same object 
+which is currently selected . In other words, bind() method allows us to easily set which object will be 
+bound by the this keyword when a function or method is invoked
+
+can we change getter setter name?
+--> we can change but not a good practice to do
+
+
+By default member of class are_____
+--> Public
+
+what  hasOwnPropery return and use of it?
+--> The hasOwnProperty() method returns a boolean indicating whether the object has the specified property as its own property 
+
+how to delare private variable in JS
+--> # preceded by variable name
+
+
+How to indicate that variable is protected
+--> _ preceded by variable name
+
+
+Can we have static private method?
+--> Yes [ES8]
+
+can I have static varibale in JS  [es8]
+--> Yes
+
+what is generator method and yield key word
+--> Genretaor method helps to iterate the method & 
+	The yield keyword is used to pause and resume a generator function
+
+how to incluse .js file in html
+--> <script type="text/javascript" src="folder/filename.js"></script>
+
+when onclick event get fire
+--> The onclick attribute fires on a mouse click on the element.
+
+
+how to redirect user to another page.
+--> 	location.href: It is used to set or return the complete URL of the current page.
+	location.replace(): It is used to replace the current document with the specified one.
+	location.assign(): It is used for loading a new document.
+
+how to open a file in new window
+--> window.open(URL, '_blank');
+
+
+difference between alert and prompt
+--> 1. Alert box :
+	An alert box is one type of popup boxes in JavaScript which is often used to make sure that information have 
+	come through the user. So, the user will have to click “OK” to proceed when an alert box pops up on the window.
+
+	2. Prompt box :
+	It is also one of the type of popup boxes in JavaScript which is often to take input a value before entering a page 
+	from the user. To proceed after entering an input value in the prompt, the user will have to click either “OK” or “Cancel”.
+
+
+use of confirm and what is its return value[Ok cancel]
+--> The confirm() method displays a dialog box with a message, an OK button, and a Cancel button.
+	The confirm() method returns true if the user clicked "OK", otherwise false.
+
+How to convert string to int/ float
+--> +, parseInt
+
+what is the use of + operator
+--> Concat(Overloaded), convert from string to int/float, addition
+
+which method is  used to delay the execution of task
+--> setTimeout("alert('hi')",6000); //execute one time after 60000 millisecond
+
+which method tobe used to do the job after few milisecond.
+--> setInterval("alert('hi')",1000);	//keep executeing after 1000 millisecond
+
+what is the use of eval.
+--> Evaluate any expression.
+
+List down all method of window class
+--> Open, close, alert, prompt, confirm isNaN, isFinite,eval setInterval, clearInterval setTimeOut, 
+	clearTimeOut Location is getter/setter
+
+
+Day 5
+
+Which is the fastest selctor in DOM
+--> ID
+
+What is DOM
+--> HTML, CSS tags manipulation
+	The Document Object Model (DOM) is a programming interface for web documents.
+	 It represents the page so that programs can change the document structure, style, and content.
+	 The DOM represents the document as nodes and objects; that way, programming languages can interact 
+		with the page.
+
+How to get collection of all classes given in  a perticular tag
+--> classList.
+
+How to add css class dynamicaly to a perticular tag
+--> classList.add
+
+How to remove css class dynamicaly to a perticular tag
+--> classList.remove
+
+How to replace one css class with another to a perticular tag
+--> classList.replace
+
+How to repace content of a perticualr tag 
+--> innerHtml
+
+How to toggle the CSS class 
+--> .toggle	(span.classList.toggle)
+
+How to change HTML Attribute dynamicaly
+--> classList.contains()
+
+
+How to read HTML Attribute dynamicaly
+--> getAttribute
+
+
+nodeName of Document, text, element 
+--> #document, #text, tag name
+
+
+How to read value vita using DOM
+<p id="pr">welcome to <b> VITA</b></p>
+--> 	<p id="pr">welcome to <b> VITA</b></p>
+	{let s=document.getElementById("pr")
+
+
+
+How to read value of textbox with id="INP"
+--> document.getElementById("INP")
+
+
+
+of > read one by one
+for..of on the other hand, is mainly interested in values of iterable 
+objects. Built-in objects like Map and Set implement Symbol.iterator 
+property allowing access to stored values.
+
+
+in > array, iterate the property
+for..in operates on any object; it serves as a way to inspect properties 
+on this object
+
+
+
+
+

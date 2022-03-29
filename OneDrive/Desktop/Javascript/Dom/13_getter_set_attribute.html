@@ -1,0 +1,10 @@
+<p align="center" id="pp" style="color:red"> hello</p>
+<input type="button" onclick="go()" />
+<div id="dd"></div>
+<script>
+    function go() {
+        document.getElementById("pp").setAttribute("align", "left");
+
+        document.getElementById("dd").innerHTML = document.getElementById("pp").getAttribute("align");
+    }
+</script>

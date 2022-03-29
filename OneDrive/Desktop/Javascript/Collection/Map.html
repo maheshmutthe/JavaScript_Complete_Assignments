@@ -1,0 +1,49 @@
+<script>
+    "use strict"
+    var myMap = new Map();
+    myMap.set("k1", "zero");
+    myMap.set("k2", "one");
+
+    for (var [key, value] of myMap) {
+        console.log(key + " = " + value);
+    }
+
+
+    // Will show 2 logs; first with "0 = zero" and second with "1 = one"
+    for (var key of myMap.keys()) {
+        console.log(key);
+    }
+    console.log(myMap.keys())
+
+
+    /*
+     if(!myMap.has(1))
+     myMap.set(1, "one---");//duplicate key leads to over writeing
+     else
+     alert("duplicate key not allowed")
+     console.log(myMap)
+     // Will show 2 logs; first with "0" and second with "1"
+     for (var value of myMap.values()) {
+       console.log(value);
+     }
+     // Will show 2 logs; first with "zero" and second with "one"
+     
+     for (var [key, value] of myMap.entries()) {
+       console.log(key + " = " + value);
+     }
+     
+     // Will show 2 logs; first with "0 = zero" and second with "1 = one"
+     myMap.forEach(function(value, key) {
+       console.log(key + " =44 " + value);
+     }, myMap)
+     console.log(myMap.size)
+     console.log(myMap.entries())
+     
+     
+     var mysort = new Map([...myMap].sort());
+     console.log(mysort);
+     
+     console.log([...myMap.entries
+)])
+*/
+</script>

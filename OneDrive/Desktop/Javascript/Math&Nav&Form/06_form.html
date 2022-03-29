@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <script>
+        function call() {
+            var v = document.forms[0].elements.length
+            alert(document.forms.length)
+                //alert(document.forms.length);
+            alert(v)
+            let data = "";
+            for (let i = 0; i < v; i++)
+                data += (document.forms[0].elements[i].value)
+
+            document.getElementById("n").innerHTML = data;
+        }
+
+        function call2() {
+            alert("hi");
+        }
+    </script>
+</head>
+
+<body>
+    <p id="n">hello</p>
+    <fieldset>
+        <legend align="center">Form[0]</legend>
+        <form>
+            <label id="lb">hello</label>
+            <input type="radio" name="rd" value="better" />better
+            <input type="radio" name="rd" value="best" />best
+            <input type="button" value="click" onclick="call(),call2()">
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend align="center">Form[1]</legend>
+        <form legend="Form[1]">
+            <p id="mm">hello</p>
+            <input type="radio" name="dd" value="yes" />yes
+            <input type="radio" name="dd" value="no" />no
+            <input type="button" value="second frm">
+        </form>
+    </fieldset>
+
+
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p>Counting with a local variable.</p>
+    <button type="button" onclick="myFunction()">Count!</button>
+    <input type="button" value="go..." onclick="dojob()" />
+    <p id="demo">0</p>
+    <!--Closure persist id value every time -->
+    <script>
+        dojob = function() {
+            alert(document.getElementById("demo"));
+            alert(document.getElementById("demo").innerHTML) 
+            document.getElementById("demo").innerHTML = "hi"
+
+        }
+    </script>
+</body>
+
+</html>

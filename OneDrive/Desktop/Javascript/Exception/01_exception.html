@@ -1,0 +1,16 @@
+<script language="JavaScript">
+    try {
+        colours[2] = "red";
+    } catch (e) {
+        console.log(e);
+        console.log(e.constructor);
+
+        alert(e.message + "Oops! Something bad just happened. " + e.name);
+        console.log(e.fileName) // "Scratchpad/1" 
+        console.log(e.lineNumber) // 5 
+        console.log(e.columnNumber) // 2 
+        console.log(e.stack)
+
+    } 
+    document.write("code will go ahead");
+</script>

@@ -1,0 +1,47 @@
+<html>
+<style>
+    .err {
+        color: red
+    }
+</style>
+<script>
+    function check() {
+        var tobj = document.frm.nm
+        console.log(tobj.__proto__);
+        data = tobj.value
+        var len = data.length
+        let sobj = document.getElementById("ter");
+
+        //required
+        if (len == 0) {
+            sobj.innerHTML = "password can not be blank"
+            document.frm.nm.focus()
+
+            return false
+        } else if (len < 8 || len > 16) {
+            sobj.innerHTML = "minimum 8 character required and can not exceed 15"
+            document.frm.nm.focus();
+            //document.frm.sub.disabled=true;
+            return false
+        } else
+            sobj.innerHTML = ""
+            // document.frm.sub.disabled=false;
+
+    }
+
+    function setcur() { //autofocus
+        var tobj = document.frm.nm
+        tobj.focus()
+
+    }
+</script>
+
+<body onLoad="setcur()">
+    <form name="frm" action="blur.html" onsubmit="return check()">
+        <label>Password</label>
+        <input type="text" name="nm" onchange="check()"><span id="ter" class="err"></span>
+        <input type="submit" name="sub" value="submit" disabled>
+    </form>
+</body>
+
+</html>

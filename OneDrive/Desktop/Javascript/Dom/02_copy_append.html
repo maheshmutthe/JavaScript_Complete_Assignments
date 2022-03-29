@@ -1,0 +1,31 @@
+<html>
+
+<head></head>
+<script type="text/javascript">
+    let pobj = document.getElementById("pr")
+    alert(pobj);
+
+    function callme() {
+        var text = "welcome to world of DOM "
+        let pobj = document.getElementById("pr")
+        pobj.innerHTML = pobj.innerHTML + text;
+    }
+</script>
+
+<body>
+    <input type="button" value="get Data" onclick="callme()" />
+    <p id="cp">hello</p>
+    <input type="button" value="copy" onclick="call()" />
+    <p id="pr">chk</p>
+
+
+    <script>
+        function call() {
+            var x = document.getElementById("cp");
+            var y = document.getElementById("pr");
+            y.innerHTML += x.innerHTML //(+= Appends and = will copy)
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+Dom
+tag == reference == node
+
+
+p has child node text which has data
+
+html tag has property(class, id, check) and attribute(value)
+attribute is cer
+input type text has property and attribute as well where attribute value cant be change
+
+Text is Always Stored in Text Nodes
+
+hierarchy
+HTML(parent)
+head, body
+head-->(title, text)
+body-->(h1, p)
+p--> (span)
+span--> (text, nodevalue(text inside))
+
+class--> .
+id --> # 
+
+p is a block level element which occupies entire line
+
+innerHTML accepts all value inside tag
+
+dom is heavy for a page so we virtual dom
+
+getElements gives train
+getElement gives single single
+
+classlist change dynamically
+
+classlist add dynamically
+
+classlist diffrent all together
+classname train of same class
+
+classlist remove 
+
+contains --> check if class present in classlist
+	(used internally in toggle)
+Toggle --> removes if present & add if absent
+
+queryselector pick 1st tag
+queryselectorall pick all tags
+
+

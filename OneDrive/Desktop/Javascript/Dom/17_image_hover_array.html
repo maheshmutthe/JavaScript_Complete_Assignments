@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <script>
+        function callme() {
+            //document.mg.src="b.bmp";
+            // document.images[0].src="b.bmp";
+            document.getElementById("im").src = "b.bmp";
+        }
+
+        function backimg() {
+            document.mg.src = "a.bmp";
+        }
+    </script>
+</head>
+
+<body>
+    <img src="a.bmp" name="mg" id="im" onmouseover="callme()" onmouseout="backimg()">
+    <img src="p.bmp" />
+    <img src="x.bmp" />
+</body>
+
+</html>

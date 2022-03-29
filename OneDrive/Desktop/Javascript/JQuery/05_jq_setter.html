@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html><head>
+<style>#dd{color:green;}
+</style>
+<script src="../jquery-1.9.1.js"></script>
+<script>
+$(document).ready(function() {
+ let a=$("#aa");
+a.mouseover(function(){
+    a.attr("align","center");
+
+});
+let a2=$("#nn");
+a2.mouseover(function(){
+a2.attr({  "align":"center", "title":"go"} )
+});
+});
+</script></head>
+<body>
+<h1 id="aa" align="right"/>Hello</h1>
+<h3  id="nn"/>h3</h3>
+</body></html>

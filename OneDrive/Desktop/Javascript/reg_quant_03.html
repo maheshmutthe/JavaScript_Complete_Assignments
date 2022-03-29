@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<body>
+
+    <p>Click the button to global search for "is" followed by " all".</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            var str = "is this there isall";
+            var patt1 = /is(?=all)/;
+            var result = str.search(patt1);
+            document.getElementById("demo").innerHTML = result;
+
+        }
+    </script>
+</body>
+
+</html>

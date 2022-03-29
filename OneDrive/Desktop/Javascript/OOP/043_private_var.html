@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        'use strict'
+        class Account {
+
+
+
+
+            #
+            name
+
+            # balance
+
+            constructor(name, amt) {
+                this.#name = name;
+                this.#balance = amt;
+                alert(typeof this.constructor)
+            }
+            toString() {
+                    return `Name=${this.#name} Bal=${this.#balance}`
+                }
+                /*
+  toString()
+      {return “Name=“+this.#name+ “Bal=“+this.#balance;
+
+  }
+  */
+            var obj1 = new Account("raj", 20000);
+            console.log(obj1);
+            document.write(obj1 instanceof Account); //true
+            document.write(obj1 instanceof Object); //true
+            //obj1.#name="geeta";
+            console.log(obj1);
+            document.write(obj1); //geeta 20000
+            var obj2 = new Account("Mona", 50000);
+            console.log(new Object());
+    </script>
+</body>
+
+</html>

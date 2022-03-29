@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <script language="JavaScript">
+        // create new Error objects
+        badNameError = new Error("System user name does not match actual user name");
+        noNameError = new Error("System user name cannot be blank");
+
+        function mainExceptionHandler(e) {
+            alert(e.message);
+        }  // general form validation functions
+        function validateForm() {
+            checkName();
+        }
+
+        function checkName() {
+            try {
+                if (document.forms[0].username.value == "") {
+                    throw noNameError;
+                } 
+                if (document.forms[0].username.value != "john") {
+                    throw badNameError;
+                }
+            } catch (e) {
+                // any and all errors will go to this handler
+                mainExceptionHandler(e);
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <form onSubmit="validateForm()">
+        Enter your system username: <input type="text" name="username">
+        <br> <input type="submit" name="submit" value="Go">
+    </form>
+
+</body>
+
+</html>

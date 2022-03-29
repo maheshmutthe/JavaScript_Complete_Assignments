@@ -1,0 +1,12 @@
+<script>
+    var srt = new Array("anita", "Zeena", "beena")
+    document.write("<br/>" + srt.sort())
+    var srtno = [100, 350, 1, 2]
+    document.write("<br/>" + srtno.sort())
+    document.write("<p>after sort function</p>")
+
+    function sortnumber(a, b) {
+        return a - b
+    }
+    document.write("<br/>" + srtno.sort(sortnumber)) //(depend on browser)
+</script>

@@ -1,0 +1,31 @@
+<script>
+    const array1 = [5, 12, 8, 130, 44];
+
+    const found = array1.find(element => element > 10);
+
+    console.log(found);
+    // expected output: 12
+</script>
+<script>
+    const inventory = [{
+        name: 'apples',
+        quantity: 2
+    }, {
+        name: 'bananas',
+        quantity: 0
+    }, {
+        name: 'cherries',
+        quantity: 5
+    }];
+
+    function isCherries(fruit) {
+        console.log("=====")
+        console.log(fruit)
+        console.log("=====")
+        return fruit.name === 'cherries';
+    }
+
+    console.log(inventory.find(isCherries));
+    document.write(inventory.find(isCherries));
+    // { name: 'cherries', quantity: 5 }
+</script>

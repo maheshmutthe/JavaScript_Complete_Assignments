@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <script>
+        function call(a) {
+            v = a.length
+            alert(a)
+            alert(v)
+            let data = "";
+            pobj = document.getElementById("pp");
+            for (i = 0; i < v; i++) {
+                data = data + a.elements[i].value;
+
+            }
+            pobj.innerHTML = data;
+        }
+    </script>
+</head>
+
+<body>
+    <p id="pp"></p>
+    <form>
+        <input type="radio" name="rd" value="good" onclick="call(this.value)">good
+        <input type="radio" name="rd" value="better">better
+        <input type="radio" name="rd" value="best">best
+        <input type="button" value="click" onclick="call(this.form)">
+    </form>
+</body>
+
+</html>

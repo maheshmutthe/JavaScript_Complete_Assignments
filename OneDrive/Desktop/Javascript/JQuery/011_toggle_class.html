@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.rc{color:pink;}
+.gc{color:red;}
+</style>
+<script src="../jquery-1.9.1.js"></script>
+<script>
+$(document).ready(function() {
+ $("#pd").mouseover(function (){
+	$("#pd").toggleClass("gc");
+})
+});
+</script></head>
+<body>
+<p id="pd" class="gc"> this p tag</p>
+</body></html>

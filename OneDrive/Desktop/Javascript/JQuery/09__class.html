@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><style>
+.rc {color:pink;
+   font-size:20px;
+  }
+.gc {background-color:green;}
+</style>
+<script src="../jquery-1.9.1.js"></script>
+<script>
+$(document).ready(function() {
+
+ $("#pd").mouseover(function ()
+   {
+	$("#pd").addClass("rc gc");
+  })
+});
+</script>
+</head> <body>
+<p id="pd"> this p tag</p>
+</body></html>

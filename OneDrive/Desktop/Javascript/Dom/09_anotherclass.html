@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <script>
+        function callme() {
+            document.getElementById("pr").style.color = "red";
+            document.getElementById("pr").style.background = "yellow";
+        }
+
+        function change() {
+            document.getElementById("pr").style.color = "black";
+            document.getElementById("pr").style.background = "pink";
+        }
+    </script>
+</head>
+
+<body>
+    <p onmouseover="callme()" id="pr" onmouseout="change()"> welcome to world of style and dom</p>
+</body>
+
+</html>

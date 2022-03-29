@@ -1,0 +1,51 @@
+ajax, fetch returns promise
+
+return server
+
+writeHead --> Header info
+
+response - end of response
+
+server.listen -> port host callback
+
+exports --> access file outside
+
+url.Parse --> Getter,method takes a URL string, parses it,
+	 and it will return a URL object.
+
+NPM - Node package manager
+to install package for version management & dependancy to add
+
+install aditional packages - install package package name
+
+EventEmitter --> class
+
+connectHandler --> create an event handler
+
+eventEmitter.on --> create connection or bind 
+
+eventEmiiter.emit --> fire the connection event
+
+. --> Current Directory
+
+express() --> server ref
+
+__dirname --> physical path
+
+listUser --> 
+
+id --> /2  read file in aaray
+
+Json.parse --> string to object
+
+var use = users["users" + req.params.id] //concat multiple user(file)
+
+
+
+$ npm install body-parser --save 
+$ npm install cookie-parser --save 
+$ npm install multer --save
+npm install express --save
+
+
+public folder keeps static files

@@ -1,0 +1,21 @@
+<script>
+    var  s = "2015-03-25"
+    var  d  =  new  Date(s);
+    document.write( s + "  " + typeof s);
+    document.write( d + "  " + typeof d);
+    document.write( "<hr/>");
+    document.write( d.constructor);
+
+    var  msec  =  Date.parse("March 21, 2012");
+    document.write( msec);
+    document.write( "<hr/>");
+    var  d  =  new  Date(msec);
+    document.write( d);
+
+    var  sdate  =  Date.parse("Mar-21-2012");
+    var  dat  =  new  Date(sdate);
+    document.write( dat);
+
+    console.log(Date)
+    console.log(d.__proto__)
+</script>

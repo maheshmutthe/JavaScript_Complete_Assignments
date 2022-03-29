@@ -1,0 +1,11 @@
+<script>
+    var go = function() {
+        return "This is a String";
+    }
+    var testStr = go(); // testStr contians "This is a string"
+    document.write(testStr);
+
+    var testCopy = go; // testCopy is a pointer to the  function()
+    var testing = testCopy(); // testing contains "This is a string"
+    document.write(testing);
+</script>

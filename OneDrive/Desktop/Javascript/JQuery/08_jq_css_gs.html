@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html><head><style>
+.rc {color:pink;
+	border:2px solid pink;
+
+}
+.gc {	color:green;
+	height:250px;
+	border:2px solid green;
+	padding:2px;
+	width:150px;
+}
+</style>
+<script src="jquery-3.6.0.js"></script>
+<script>
+$(document).ready(function() {
+
+ $("#pd").mouseover(function ()
+  {	
+var a=$("#pd").css("color");
+alert(a);
+$("#s").css("color","blue");
+$("#s").css({'background-color':'bisque','font-weight' : 'bolder'});
+});
+});
+</script>
+</head><body>
+<h1> hello this is h1 tag</h1>
+<p id="pd" class="gc"> this p tag</p>
+<p id="s" class="rc"> this p tag with pink color</p>
+</body>
+</html>
